@@ -1,0 +1,13 @@
+{% extends "learn_user_app/base.html" %}
+
+{% block body_block%}
+<form class="" action="{% url 'learn_user_app:login_user' %}" method="post">
+  {% csrf_token %}
+  username:
+  <input type="text" name="username" value="">
+  password:
+  <input type="password" name="password" value="">
+  <input type="submit" name="" value="login">
+</form>
+
+{% endblock%}
